@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* estilo general */
+body {
+    background-color: rgb(32, 31, 31);
+}
+
+
+/* estilos de main mobile first */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    text-align: center;
+}
+
+.vidmain{
+    display: none;
+}
+
+main h2{
+    margin-top: 50px;
+    border-style: solid; 
+    border-color: rgba(255, 255, 0, 0.836); 
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+main p{
+    margin: 25px 25px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    
+}
+
+main .playlist{
+    display: flex;
+    margin-top: 100px;
+}
+
+
+/* formulario de registro main index */
+section{
+    margin-bottom: 50px;
+}
+
+.formregistrar{
+    width: 400px;
+    background: #2e2d2d;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+    border-style: inset;
+    border-color: aqua;
+    
+}
+
+.formregistrar h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.formregistrar p{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.controls{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(20, 20, 158);
+    font-size: 18px;
+    color: black;
+}
+
+.botons{
+    padding: 12px;
+    font-size: medium;
+    width: 190px;
+    cursor: pointer;
+    background: #799be6;
+    color: white;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+
+.botons:hover{
+    background: transparent;
+    border: 2px solid #799be6;
+    box-shadow: 0 0 10px 0 #799be6 inset,
+    0 0 10px 4px #799be6;
+    border-radius: 10px;
+}
+
+/* main noticias html */
+
+.h1news{
+    margin-bottom: 50px;
+}
+
+.h2news{
+    margin-bottom: 50px;
+    
+}
+
+.videonews{
+    width: 854px;
+    height: 480px;
+}
+
+
+
+/* animacion redes sociales  para footer general*/
+
+.iconosredes{
+    color: white;
+    text-align: center;
+    
+}
+
+.icon{
+    
+    display: inline-block;
+    margin:auto;
+    padding: 5px;
+    animation: float 5s ease-in-out infinite;
+    transition: 4s;
+}
+
+.fbline{
+    animation-delay: 1s;
+}
+
+.instagram{
+    animation-delay: 2s;
+}
+
+.whats{
+    animation-delay: 2s;
+}
+
+.gmail{
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(1);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(1);
+    }
+}
+
+/* bootsrap cards productos.html */
+
+.cardspro{
+    display: flex;
+    gap: 40px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px rgba(201, 216, 118, 0.911);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(177, 207, 119, 0.87);
+    transform: translateY(-5%);
+}
+
+.mainnoticias video{
+    width: 350px;
+    height: 400px;
+}
+
+/* estilos footer */
+
+.footergeneral{
+    background-color: rgb(37, 39, 39);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-top: 300px;
+    
+}
+
+.hfoot{
+    font-size: 20px;
+}
+
+.diva{
+    text-align: center;
+}
+
+footer a{
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: cornflowerblue;
+}
+
+
+/* media queris */
+
+@media screen and (min-width:576px){
+    header{
+        margin-bottom: 50px;
+    }
+
+    ul{
+        transition: 2s ease;
+    }
+
+    .lihover:hover{
+        background: transparent;
+        border: 2px solid #799be6;
+        box-shadow: 0 0 10px 0 #799be6 inset,
+        0 0 10px 4px #799be6;
+        border-radius: 10px;
+    }
+    
+
+
+    /* estilos main index media queris */
+
+    .superdiv{
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-rows: 0.1fr 0.5fr 0.2fr;
+        grid-template-areas: 
+        "h2 h2" 
+        "p p"
+        "section playlist";
+        
+    }
+
+    .superdiv h2{
+        grid-area: h2;
+    }
+
+    .superdiv p{
+        grid-area: p;
+    }
+
+    .superdiv .playlist{
+        grid-area: playlist;
+    }
+
+    .superdiv section{
+        grid-area: section;
+
+    }
+
+
+    .vidmain{
+        
+    display: block;
+    box-sizing: border-box;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    }
+
+    .vidmain video{
+        display: block;
+        width: auto;
+        height: auto;
+    }
+
+    .playlist{
+        margin: auto;
+        width: 400px;
+    }
+
+    /* grid productos html */
+
+.mainpro{
+    padding: 0;
+        display: grid;
+        grid-template-rows: 0.5fr 1fr 1fr;
+
+}
+
+/* video noticias html */
+
+.mainnoticias video{
+    width: 1200px;
+    height: 680px;
+}
+
+
+
+
+
+
+}
