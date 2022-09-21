@@ -20,7 +20,21 @@ main{
     text-align: center;
 }
 
+.vidmain{
+        
+    display: block;
+    box-sizing: border-box;
+    object-fit: cover;
+    overflow: hidden;
+    
+    }
 
+    .vidmain video{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        
+    }
 
 main h2{
     margin-top: 50px;
@@ -283,19 +297,20 @@ footer a:hover{
     display: block;
     box-sizing: border-box;
     object-fit: cover;
-    width: auto;
-    height: auto;
+    overflow: hidden;
+    
     }
 
     .vidmain video{
         display: block;
-        width: auto;
+        max-width: 100%;
         height: auto;
+        
     }
 
     .playlist{
         margin: auto;
-        width: 400px;
+        max-width: 100%;
     }
 
     /* grid productos html */
